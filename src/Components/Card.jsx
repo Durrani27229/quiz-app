@@ -12,14 +12,14 @@ export default function MultiActionAreaCard(props) {
     <Card className='card' >
       <CardActionArea>
         <CardMedia
+          sx={{objectFit:'contain',height:'200px'}}
           component="img"
-          height="140"
           image={props.image}
           alt={props.name}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {props.title}
+            {props.title.slice(0,20)}
           </Typography>
           <Typography variant="body2" sx={{ color: 'text.secondary' }}>
             {props.description.slice(0,80)}
